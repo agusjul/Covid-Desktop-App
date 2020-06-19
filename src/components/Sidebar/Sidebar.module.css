@@ -1,0 +1,22 @@
+nav a:hover {
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+nav  a {
+    color: rgb(24, 23, 23);
+    border-radius: 8px;
+}
+
+.navbar-active{
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.navbar-active:hover {
+    border-bottom: 1px solid white;
+}

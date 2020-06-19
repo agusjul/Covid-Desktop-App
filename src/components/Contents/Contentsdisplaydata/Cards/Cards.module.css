@@ -1,0 +1,23 @@
+.container {
+    width: 90%;
+    margin: 20px 50px;
+}
+
+.confirmed {
+    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+    color: white;
+    border-radius: 4px;
+}
+
+.recovered {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+    color: white;
+    border-radius: 4px;
+}
+
+.deaths {
+    background: linear-gradient(45deg,#FF5370,#ff869a);
+    color: white;
+    border-radius: 4px;
+}
+

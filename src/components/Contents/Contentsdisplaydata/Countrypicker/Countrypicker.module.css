@@ -1,0 +1,17 @@
+.container {
+    width : 100%;
+    border-radius: 50px;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow:  41px 41px 100px #d9d9d9, 
+                -41px -41px 100px #ffffff;
+}
+
+.formpick {
+    width: 90%;
+    margin: 20px 0 0 0;
+}
+
+Form.Control {
+    border: none;
+}
