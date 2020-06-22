@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {fetchDailyData} from '../../../../api/';
 import {Line, Bar, Doughnut } from 'react-chartjs-2';
-import {Card, CardDeck} from 'react-bootstrap';
 
 import styles from './Chart.module.css';
 

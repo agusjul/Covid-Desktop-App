@@ -2,11 +2,15 @@
     width: 95%;
     height : 40%;
     margin:  20px auto;
-    background-color: grey;
 }
 
 .conten {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.fitur {
+    width: 95%;
+    margin: 20px auto;
 }
