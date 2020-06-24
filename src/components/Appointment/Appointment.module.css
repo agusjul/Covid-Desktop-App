@@ -1,0 +1,23 @@
+.body {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+.item {
+    margin-bottom: 12;
+}
+
+.component {
+
+    width: 95%;
+    margin: auto;
+}

@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import LiveTracker from './components/Contents/LiveTracker';
 import Dashboard from './components/Contents/Dashboard/Dashboard';
 import Appointment from './components/Appointment/Appointment';
+import Pencegahan from './components/Pencegahan/Pencegahan';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
   BrowserRouter as Router,
@@ -41,7 +42,7 @@ function App() {
                  </Route>
                  <Route exact path="/pencegahan">
                     <Header/>
-                   Haloo
+                    <Pencegahan/>
                  </Route>
               </Switch>
           </div>     

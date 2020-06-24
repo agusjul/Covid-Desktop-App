@@ -7,8 +7,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 
 
-
-
 class Createappointment extends React.Component { 
       
 
