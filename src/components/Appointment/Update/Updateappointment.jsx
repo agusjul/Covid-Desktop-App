@@ -6,42 +6,6 @@ import {Button, Modal} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
 
-function Modalcomponent(){
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-  
-    return (
-      <div>
-        <Button variant="primary" onClick={handleShow}>
-          Launch static backdrop modal
-        </Button>
-        
-  
-        <Modal
-          show={show}
-          onHide={handleClose}
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            I will not close if you click outside me. Don't even try to press
-            escape key.
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary">Understood</Button>
-          </Modal.Footer>
-        </Modal>
-      </div>
-    );
-}
 
 
 class Updateappointment extends React.Component { 
@@ -101,6 +65,7 @@ class Updateappointment extends React.Component {
             )
             this.props.history.push('/listappointment');
             this.forceUpdate()
+            this.props.toast()
             
       }
 
@@ -180,9 +145,9 @@ class Updateappointment extends React.Component {
                         <textarea name="keterangan"  value={this.state.persons.keterangan} onChange={this.handleOptionChange} class="form-control" aria-label="With textarea"></textarea>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary pl-5 pr-5">Update</button>
                     </div>
-                    <Modalcomponent/>
+                   
                 </form>
             </div>
         )

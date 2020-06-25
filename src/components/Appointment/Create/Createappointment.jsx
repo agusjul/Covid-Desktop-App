@@ -54,6 +54,7 @@ class Createappointment extends React.Component {
 
             this.props.history.push('/');
             this.forceUpdate()
+            this.props.toast()
             
       }
 
@@ -114,7 +115,7 @@ class Createappointment extends React.Component {
                         <textarea name="keterangan"  value={this.state.keterangan} onChange={this.handleOptionChange} class="form-control" aria-label="With textarea"></textarea>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
+                        <button type="submit" class="btn btn-primary" styles={{widht: "400px"}}>Pesan Sekarang</button>
                     </div>
                 </form>
             </div>

@@ -10,11 +10,12 @@ import Createappointment from './Create/Createappointment';
 import Updateappointment from './Update/Updateappointment';
 import styles from './Appointment.module.css';
 import DatePicker from "react-datepicker";
-
+import {Toast} from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
 
 
 function Button(){
+
     let history = useHistory();
 
     function handleClick() {
@@ -52,24 +53,65 @@ function Back(){
     }
 
     return (
-        <button onClick={handleClick}  type="button" class="btn btn-info mt-4 w-100">Back</button>
+        <div className={styles.back}>
+            <button onClick={handleClick}  type="button" class="btn btn-secondary w-100">Back</button>
+        </div>
+        
     );
 }
 
 
 class Appointment extends React.Component {
+
+    state = {
+        tampil :false,
+        tampil2 :false
+    }
+
+    handleTampil = () =>{
+        this.setState({tampil : true})
+    }
+    handleTutup = () =>{
+        this.setState({tampil : false})
+    }
+    handleTampil2 = () =>{
+        this.setState({tampil2 : true})
+    }
+    handleTutup2 = () =>{
+        this.setState({tampil2 : false})
+    }
+
     render(){
         return (
             <div>
+                {console.log("disini")}
+                <div aria-live="polite" aria-atomic="true" style={{position: "relative"}} >
+                    <Toast show={this.state.tampil2} onClose={this.handleTutup2} className={styles.notif} delay={2000} autohide>
+                    <Toast.Header>
+                        <strong className="mr-auto">Sistem</strong>
+                    </Toast.Header>
+                    <Toast.Body>Berhasil menambahkan data</Toast.Body>
+                    </Toast>
+                </div>
+                <div aria-live="polite" aria-atomic="true" style={{position: "relative"}} >
+                    <Toast show={this.state.tampil} onClose={this.handleTutup} className={styles.notif} delay={2000} autohide>
+                    <Toast.Header>
+                        <strong className="mr-auto">Sistem</strong>
+                    </Toast.Header>
+                    <Toast.Body>Berhasil mengupdate data</Toast.Body>
+                    </Toast>
+                </div>
                 <Router>
                     <div> 
                          <Switch>                             
                             <Route path="/updateappointment/:id">
-                                <Updateappointment/>
+                                <Updateappointment toast = {this.handleTampil}/>
+                                <Back/>
                             </Route>
                             <Route path="/createappointment">
+                               
+                                <Createappointment toast = {this.handleTampil2}/>
                                 <Back/>
-                                <Createappointment/>
                             </Route>
                             <Route path="/">
                                 <div className={styles.body}>

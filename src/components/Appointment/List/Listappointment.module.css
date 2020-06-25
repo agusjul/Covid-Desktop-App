@@ -23,4 +23,12 @@ tr:hover{
     margin-left: 40px;
 }
 
+.notif {
+    position: absolute;
+    right: 0;
+    top: -170px;
+    width: 100%;
+}
+
+
 

@@ -21,3 +21,21 @@
     width: 95%;
     margin: auto;
 }
+
+
+.notif {
+    z-index: 9999;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    width: 100%;
+    margin: 10px 25px 0 0;
+}
+
+.back {
+    width: 150px;
+    margin-left: 300px;
+    margin-bottom: 180px;
+    bottom: 0;
+    position: absolute;
+}

@@ -24,8 +24,9 @@ const createWindow = () => {
     mainWindow = new BrowserWindow({
         width : 1280,
         height : 720,
-        maxWidth : 1280,
-        maxHeight : 720,
+        minWidth : 1280,
+        minHeight : 720,
+        titleBarStyle: 'hidden',
         webPreferences: {
             nodeIntegration: true,
         },
@@ -43,13 +44,14 @@ const createWindow = () => {
         app.quit()
         mainWindow = null
     })
+    Menu.setApplicationMenu(null)
 
-    if (process.env.ELECTRON_START_URL) {
-        const mainMenu = Menu.buildFromTemplate(menuTemplate)
-        Menu.setApplicationMenu(mainMenu)
-    } else {
-        Menu.setApplicationMenu(null)
-    }
+    // if (process.env.ELECTRON_START_URL) {
+    //     const mainMenu = Menu.buildFromTemplate(menuTemplate)
+    //     Menu.setApplicationMenu(mainMenu)
+    // } else {
+    //     Menu.setApplicationMenu(null)
+    // }
 }
 
 app.on("ready", createWindow)
@@ -86,11 +88,11 @@ const sendTodayAppointments = () => {
     mainWindow.webContents.send("appointment:response:today", filtered)
 }
 
-const menuTemplate = [{
-    label: "View",
-    submenu: [{
-        role: "reload"
-    }, {
-        role: 'toggledevtools'
-    }],
-}, ]
+// const menuTemplate = [{
+//     label: "View",
+//     submenu: [{
+//         role: "reload"
+//     }, {
+//         role: 'toggledevtools'
+//     }],
+// }, ]

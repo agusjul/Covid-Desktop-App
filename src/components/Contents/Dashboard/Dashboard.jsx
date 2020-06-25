@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Carousel} from 'react-bootstrap';
-import img1 from './img/img1.jpg';
-import img2 from './img/img2.jpg';
-import img3 from './img/img3.jpg';
+import img1 from '../../../img/foto1.jpg';
+import img2 from '../../../img/foto2.jpg';
+import img3 from '../../../img/foto3.jpg';
 import styles from './Dashboard.module.css';
 import { fetchData } from '../../../api/index';
 import Chart2 from '../Contentsdisplaydata/Chart/Chart2';
@@ -25,33 +25,33 @@ function ControlledCarousel() {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3 className="text-dark">First slide label</h3>
-            <p className="text-dark">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3 className="text-light">Peninjauan Posko COvid-19</h3>
+            <p className="text-light">Presiden Akan Tinjau Posko Penanganan dan Penanggulangan Covid-19 Jawa Timur</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="w-100 h-100">
           <img fluid
             className="rounded w-100 h-auto"
-            src = {img2}
+            src = {img3}
             alt="Second slide"
           />
   
           <Carousel.Caption>
-            <h3 className="text-dark">Second slide label</h3>
-            <p className="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3 className="text-light">Update Data Covid-19 Hari Ini </h3>
+            <p className="text-light">Peningkatan Terbesar Terjadi di Wilayah Jawa Tmur</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="w-100 h-100">
           <img 
-            className="rounded rounded w-100 h-auto"
-            src={img3}
+            className="rounded w-100 h-auto"
+            src={img2}
             alt="Third slide"
           />
   
           <Carousel.Caption>
-            <h3 className="text-dark">Third slide label</h3>
-            <p className="text-dark">
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            <h3 className="text-light">TNI Siap Dukung New Normal</h3>
+            <p className="text-light">
+            Para Kepala Staf TNI Siap Dukung Penerapan Adaptasi Kebiasaan Baru
             </p>
           </Carousel.Caption>
         </Carousel.Item>
